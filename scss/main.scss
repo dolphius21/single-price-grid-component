@@ -44,6 +44,7 @@ body {
   @include media-lg {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    animation: down 1s ease-out;
   }
 }
 
@@ -145,5 +146,16 @@ body {
   a {
     color: $primary-color;
     font-size: 11px;
+  }
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
